@@ -1,0 +1,33 @@
+{% extends 'base_crud.html'%}
+
+{% block contenido %}
+
+<div class="contenedor2  bg-gradient">
+    <div class="form">
+        <form class="formulario" action="" method="post" enctype="multipart/form-data">
+            <div>
+                <label for="archivo">Poster de la Película</label>
+                <input required class="form-control" type="file" name="archivo" id="archivo">
+            </div>
+            <div>
+                <label for="titulo">Título de la Película</label>
+                <input required class="form-control" type="text" name="nombre" id="nombre">
+            </div>
+            <div>
+                <label for="escritor">Escritor de la Película</label>
+                <input required class="form-control" type="text" name="nombre" id="nombre">
+            </div>
+            <div>
+                <label for="descripcion">Sinopsis de la Película</label>
+                <textarea required class="form-control" maxlength="115" name="descripcion" id="descripcion" cols="8"
+                    rows="3"></textarea>
+                
+                <div>
+                    <input class="btn bg-dark my-2 text-white" type="submit" value="Cargar">
+                </div>
+        </form>
+    </div>
+
+</div>
+
+{% endblock %}
