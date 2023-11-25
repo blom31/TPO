@@ -15,7 +15,7 @@ def configure_routes(app):
     
     @app.route('/juegos')
     def juegos():
-        return render_template('escritor_juegos_hambre.html')
+        return render_template('escritor_juegos_del_hambre.html')
     
     @app.route('/leyenda')
     def leyenda():
