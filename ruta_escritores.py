@@ -1,5 +1,5 @@
 from flask import render_template
-
+ 
 def configure_routes(app):
     @app.route('/alicia')
     def alicia():
