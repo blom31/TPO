@@ -9,9 +9,7 @@ configure_rutas(app)  # Integrar las rutas generales
 configure_ruta_peli(app)  # Integrar las rutas específicas de Alicia
 configure_ruta_escritores(app) 
 
-@app.route('/')
-def index():
-    return render_template('index.html')
+
 
 @app.route('/escritores')
 def escritores(): 
