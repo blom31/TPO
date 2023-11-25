@@ -1,15 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ url_for('static', filename = 'css/estilos_peliculas.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'css/estilos_escritores.css')}}">
     <script src="https://kit.fontawesome.com/7f7fe5557e.js" crossorigin="anonymous"></script>
-    <title>Peliculas</title>
-
+    <title>Escritores</title>
 </head>
-<body class="bg-harry">
+
+<body class="leyenda" id="bg-escritor">
     <div class="contenedor">
+        <!--* ======================================================================= -->
+        <!--* =====================M E N U  -  R E S P O S I V E===================== -->
+        <!--* ======================================================================= -->
         <header class="header">
             <h2>Bibliocinéfilo</h2>
             <nav class="nave">
@@ -20,7 +24,7 @@
                     <li class="item">
                         <a href="{{ url_for('escritores')}}" class="link">Escritores</a>
                     </li>
-                     <!-- <li class="item">
+                    <!-- <li class="item">
                         <a href="#" class="link">Géneros</a>
                     </li> -->
                     <li class="item">
@@ -30,7 +34,7 @@
                         <a href="#" class="link">Nosotros</a>
                     </li> -->
                 </ul>
-            </nav> 
+            </nav>
             <li class="user">
                 <i class="fa-solid fa-user " style="color: #ffffff;"></i>
             </li>
@@ -38,12 +42,14 @@
                 <i class="fa-solid fa-bars"></i>
             </div>
         </header>
-       
+
         {% block contenido %}
 
         <!-- ========================  C O N T E N I D O   =========================== -->
 
         {% endblock %}
+
+        </div>
         <footer class="footer">
             <div class="redes ">
                 <h4 class="text-white">Contáctanos</h4>
@@ -52,7 +58,7 @@
                 <a href="https://www.instagram.com/bibliocinefilos/"><i class="fa-brands fa-instagram" style="color: #ffffff;"></i> </a>
                 <a href="{{ url_for('conocenos')}}"><i class="fa-sharp fa-solid fa-people-group"style="color: #ffffff;"></i></a>
             </div>
-        
+
             <div class="tecno">
                 <h4 class="text-white ">Tecnologías</h4>
                 <a href="https://getbootstrap.com/"> <i class="fa-brands fa-bootstrap" style="color: #ffffff;" title="Bootstrap"></i></a>
@@ -62,7 +68,8 @@
                 <a href="https://www.w3.org/wiki/JavaScript_best_practices"><i class="fa-brands fa-js" style="color: #ffffff;" title="JavaScript"></i></a>
             </div>
         </footer>
-         <!--! ======================================================================= -->
+
+        <!--! ======================================================================= -->
         <!--! =====================  B O T O N  S C R O L L  ======================== -->
         <!--! ======================================================================= -->
 
@@ -70,6 +77,10 @@
         </div>
         </div>
     </div>
-    <script src="{{ url_for('static', filename = 'js/javaScript.js')}}"></script>
 </body>
+
 </html>
+
+</div>
+<script src="{{ url_for('static', filename = 'js/javaScript.js')}}"></script>
+</body>

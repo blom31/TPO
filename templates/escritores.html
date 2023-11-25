@@ -84,19 +84,19 @@
 <div class="pelis2">
     <div class="tarjeta">
         <img src="{{ url_for('static', filename = 'img/escritores/James_Dashner-maze-runner-1.webp') }}" alt="Maze Runner">
-        <a class="link-peliculas" href="escritor_maze_runner.html">James Dasher</a>
+        <a class="link-peliculas" href="{{ url_for('maze')}}">James Dasher</a>
     </div>
     <div class="tarjeta">
         <img src="{{ url_for('static', filename = 'img/escritores/tolkien.jpg') }}" alt="La Comunidad del Anillo">
-        <a class="link-peliculas" href="escritor_señor_anillos.html">J. R. R. Tolkien</a>
+        <a class="link-peliculas" href="{{ url_for('lord')}}">J. R. R. Tolkien</a>
     </div>
     <div class="tarjeta">
         <img src="{{ url_for('static', filename = 'img/escritores/Roald_Dahl.jpg') }}" alt="Matilda">
-        <a class="link-peliculas" href="escritor_matilda.html">Roald Dahl</a>
+        <a class="link-peliculas" href="{{ url_for('matilda')}}">Roald Dahl</a>
     </div>
     <div class="tarjeta">
         <img src="{{ url_for('static', filename = 'img/escritores/suzanne_collin2.jpg') }}" alt="Juegos del Hambre">
-        <a class="link-peliculas" href="escritor_juegos_del_hambre.html">Suzanne Collins</a>
+        <a class="link-peliculas" href="{{ url_for('juegos')}}">Suzanne Collins</a>
     </div>
 </div>
 
