@@ -12,25 +12,25 @@
 - Js.
   
 2. Herramientass de desarrollo web
-  -Html.
-  -Css.
+  - Html.
+  - Css.
 3. Framework
-  -Flask.
-  -Bootstrap.
+  - Flask.
+  - Bootstrap.
 4. Herramienta de Control de Versiones
-  -Git.
-  -GitHub.
+  - Git.
+  - GitHub.
 5.Base de Datos
-  -Workbench.
+  - Workbench.
 6. Ide utilizado
-  -Visual Studio Code.
+  - Visual Studio Code.
 7. Otras Herramientas
-  -Excel
+  - Excel
   
 **Colaboradores**
-@Yeison Rios Molina
-@Olga Betancourt
+- @Yeison Rios Molina
+- @Olga Betancourt
 
 Deployed:
-Netlify [(https://bibliocinefilos.netlify.app)]
-Github Pages: [(https://yeisonrios10.github.io/Cinebook/index.html])
+- Netlify [(https://bibliocinefilos.netlify.app)]
+- Github Pages: [(https://yeisonrios10.github.io/Cinebook/index.html])
