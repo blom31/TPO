@@ -20,7 +20,7 @@
 4. Herramienta de Control de Versiones
   - Git.
   - GitHub.
-5.Base de Datos
+5. Base de Datos
   - Workbench.
 6. Ide utilizado
   - Visual Studio Code.
