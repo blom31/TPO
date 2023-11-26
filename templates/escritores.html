@@ -24,19 +24,19 @@
 <div class="pelis">
     <div class="tarjeta">
         <img src="{{ url_for('static', filename = 'img/escritores/lewis-carroll.jpeg') }}" alt="Alicia en el Pais de las Maravillas">
-        <a class="link-peliculas" href="escritor_alicia.html">Lewis Carroll</a>
+        <a class="link-peliculas" href="{{ url_for('alicia')}}">Lewis Carroll</a>
     </div>
     <div class="tarjeta">
         <img src="{{ url_for('static', filename = 'img/escritores/j-k-rowling-potter.jpg') }}" alt="Harry Potter La Cámara Secreta">
-        <a class="link-peliculas" href="escritor_harry.html">J K Rowling</a>
+        <a class="link-peliculas" href="{{ url_for('harry')}}">J K Rowling</a>
     </div>
     <div class="tarjeta">
         <img src="{{ url_for('static', filename = 'img/escritores/stephen-king.webp') }}" alt="IT (ESO)">
-        <a class="link-peliculas" href="escritor_it.html">Stephen King</a>
+        <a class="link-peliculas" href="{{ url_for('it')}}">Stephen King</a>
     </div>
     <div class="tarjeta">
         <img src="{{ url_for('static', filename = 'img/escritores/soy-leyeda-richard.webp') }}" alt="Soy Leyenda">
-        <a class="link-peliculas" href="escritor_soy_leyenda.html">Richard Mathenson</a>
+        <a class="link-peliculas" href="{{ url_for('leyenda')}}">Richard Mathenson</a>
     </div>
 </div>
 
