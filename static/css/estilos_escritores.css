@@ -63,10 +63,10 @@ h1, h2, h3{
     grid-template-columns:repeat(4, 1fr);
     grid-template-rows: repeat(auto);
 
-    grid-template-areas: "header header header header"
-                         "contenido contenido contenido sidebar"
-                         "card-1 card-2 card-3 card-4"
-                         "footer footer footer footer";
+    grid-template-areas:"header header header header"
+                        "contenido contenido contenido sidebar"
+                        "card-1 card-2 card-3 card-4"
+                        "footer footer footer footer";
 
 }
 /** = = = = = E S T I L O   D E L   M E N U = = = = = */
