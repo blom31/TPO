@@ -32,5 +32,5 @@
 - @Olga Betancourt
 
 Deployed:
-- Netlify [(https://bibliocinefilos.netlify.app)]
-- Github Pages: [(https://yeisonrios10.github.io/Cinebook/index.html])
+- Netlify https://bibliocinefilos.netlify.app
+- Github Pages: https://yeisonrios10.github.io/Cinebook/index.html
