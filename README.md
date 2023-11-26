@@ -10,6 +10,7 @@
 1. Lenguajes de Programación
 - Pyhton.
 - Js.
+  
 2. Herramientass de desarrollo web
   -Html.
   -Css.
