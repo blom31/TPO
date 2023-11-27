@@ -40,13 +40,16 @@ cargarPeliculas();
 function validarFormulario2(e) {
   e.preventDefault();
 
-  let correo = document.getElementById("correo").value;
-  let contrasenia = document.getElementById("contrasenia").value;
-  let fechaNacimiento = document.getElementById("fecha-nacimiento").value;
+  const correo = document.getElementById("correo").value;
+  const contrasenia = document.getElementById("contrasenia").value;
+  const confirmContrasenia = document.getElementById("confirm-contrasenia").value;
+  const nombreUsuario = document.getElementById("nombre-usuario").value;
+  const fechaNacimiento = document.getElementById("fecha-nacimiento").value;
+  const genero = document.getElementById("genero").value;
+  const terminos = document.getElementById("check-terminos").checked;
 
-  let validarCorreo = /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+/;
-  let validarContrasenia =
-    /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#\$%\^&\*]).{8,}/;
+  const validarCorreo = /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+/;
+  const validarContrasenia = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#\$%\^&\*]).{8,}/;
 
   let errorText = "";
 
@@ -63,29 +66,52 @@ function validarFormulario2(e) {
       "La contraseña debe tener al menos 8 caracteres, con al menos un dígito, una mayúscula, una minúscula y un carácter especial.\n";
   }
 
+  if (confirmContrasenia === "") {
+    errorText += "El campo Confirmar Contraseña es obligatorio\n";
+  } else if (confirmContrasenia !== contrasenia) {
+    errorText += "Las contraseñas no coinciden\n";
+  }
+
+  if (nombreUsuario === "") {
+    errorText += "El campo Nombre de Usuario es obligatorio\n";
+  }
+
   if (fechaNacimiento === "") {
     errorText += "El campo Fecha de nacimiento es obligatorio\n";
   } else {
-    let fechaNac = new Date(fechaNacimiento);
-    let hoy = new Date();
-    let edad = hoy.getFullYear() - fechaNac.getFullYear();
+    const fechaNac = new Date(fechaNacimiento);
+    const hoy = new Date();
+    const edad = hoy.getFullYear() - fechaNac.getFullYear();
 
     if (edad < 18) {
       errorText += "Debes ser mayor de 18 años para registrarte.\n";
     }
   }
 
+  if (genero === "") {
+    errorText += "El campo Género es obligatorio\n";
+  }
+
+  if (!terminos) {
+    errorText += "Debes aceptar los términos y condiciones\n";
+  }
+
   if (errorText !== "") {
     alert(errorText);
     return false;
   } else {
-    alert("Su login fue exitoso.");
+    alert("Su registro fue exitoso.");
     document.getElementById("correo").value = "";
     document.getElementById("contrasenia").value = "";
+    document.getElementById("confirm-contrasenia").value = "";
+    document.getElementById("nombre-usuario").value = "";
     document.getElementById("fecha-nacimiento").value = "";
-    return false;
+    document.getElementById("genero").value = "";
+    document.getElementById("check-terminos").checked = false;  // Corrección aquí
+    return true;  // Cambiado de false a true si el formulario está destinado a ser enviado.
   }
 }
+
 
 /* ==============B O T O N   S C R O L L ========================================  */
   // Obtén el botón de scroll

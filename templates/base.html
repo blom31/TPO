@@ -78,42 +78,56 @@
         <!-- Modal -->
         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="col-12 user-img">
+                        <h1 class="modal-title fs-2 ">Login</h1>
+                        <img src="{{ url_for('static', filename = 'img/avatar/avatar1.png') }}" alt="">
                     </div>
-                    <div class="modal-body">
-                        <div class="col-12 user-img">
-                            <h1 class="modal-title fs-2 ">Login</h1>
-                            <img src="{{ url_for('static', filename = 'img/avatar/avatar1.png') }}" alt="">
+                    <form action="" class="col-12">
+                        <div class="form-group correo" >
+                            <label for="correo">Correo Electrónico</label>
+                            <input type="email" id="correo"  placeholder="Usuario o Correo">
                         </div>
-                        <form method="" action="" class="col-12" onsubmit="return validarFormulario2(event)">
-                            <div class="form-group correo">
-                                <label for="correo">Correo Electrónico</label>
-                                <input type="email" id="correo" class="form-control" aria-describedby="emailHelp"
-                                    placeholder="Usuario o Correo" required>
-                                <i class="fa-brands fa-mailchimp fa-xl"></i>
-                            </div>
-                            <div class="form-group pass">
-                                <label for="contrasenia">Contraseña</label>
-                                <input type="password" id="contrasenia" name="contrasenia" class="form-control"
-                                    placeholder="Contraseña" required>
-                                <i class="fa-solid fa-lock"></i>
-                            </div>
-                            <div class="form-group">
-                                <label for="fecha-nacimiento">Fecha de nacimiento</label>
-                                <input type="date" id="fecha-nacimiento" name="fecha-nacimiento" class="form-control"
-                                    placeholder="Fecha de nacimiento" required>
-                            </div>
-                            <button type="submit" class="btn btn-primary w-100 mt-3"><i class="fas fa-sign-in-alt"></i>
-                                Enviar</button>
-                        </form>
-                        <div class="col-12 forgot">
-                            <a href="#">Recordar Contraseña</a>
+                        <div class="form-group pass">
+                            <label for="contrasenia">Contraseña</label>
+                            <input type="password" id="contrasenia" placeholder="Contraseña">
                         </div>
+                        <div class="form-group">
+                            <label for="confirm-contrasenia">Confirmar Contraseña</label>
+                            <input type="password" id="confirm-contrasenia" placeholder="Confirmar Contraseña">
+                        </div>
+                        <div class="form-group">
+                            <label for="nombre-usuario">Nombre de Usuario</label>
+                            <input type="text" id="nombre-usuario" placeholder="Nombre de Usuario">
+                        </div>
+                        <div class="form-group">
+                            <label for="fecha-nacimiento">Fecha de nacimiento</label>
+                            <input type="date" id="fecha-nacimiento"  placeholder="Fecha de nacimiento">
+                        </div>
+                        <div class="form-group">
+                            <label for="genero">Género</label>
+                            <select id="genero">
+                                <option value="masculino">Masculino</option>
+                                <option value="femenino">Femenino</option>
+                                <option value="otro">Otro</option>
+                            </select>
+                        </div>
+                        <div class="form-group form-check">
+                            <input id="check-terminos" type="checkbox" class="form-check-input" id="terminos-condiciones">
+                            <label class="form-check-label" for="terminos-condiciones">Acepto los términos y condiciones</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100 mt-3"><i class="fas fa-sign-in-alt"></i>  Enviar</button>
+                    </form>
+                    <div class="col-12 forgot">
+                        <a href="#">¿Ya tienes una cuenta? Inicia sesión</a>
                     </div>
                 </div>
             </div>
+          </div>
         </div>
 
         {% block contenido %}
