@@ -5,22 +5,32 @@
 }
 
 body{
-    color: whitesmoke;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
     font-family: Lora, serif;
     font-size: 16px;
     font-weight: 400;
+    color: #fff;
 }
 h1, h2, h3{
     font-weight: 700;
 }
-#bg-escritor {
+
+#fondo{
+    background: linear-gradient(to right, #080808c4, #080808cd), url(../img/fondo-index.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+#alicia{
+    background: linear-gradient(to right, #0808089c, #0808089c), url(../img/escritores/alicia-libro.webp);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
 }
 .alicia{
-    background: linear-gradient(to right, #0808089c, #0808089c), url(../img/escritores/alicia-libro.webp);
-    
+    background-color: #F39C12;
 }
 .potter{
     background: linear-gradient(to right, #0808089c, #0808089c), url(../img/escritores/fondo-harry.webp);
@@ -53,16 +63,12 @@ h1, h2, h3{
 
 
 .contenedor {
+    width: 95%;
     max-width: 1300px;
-    margin: 20px auto;
     display: grid;
-    font-family: Lora;
-    font-weight: 400;
-    color: white;
     grid-gap: 20px;
     grid-template-columns:repeat(4, 1fr);
     grid-template-rows: repeat(auto);
-
     grid-template-areas:"header header header header"
                         "contenido contenido contenido sidebar"
                         "card-1 card-2 card-3 card-4"
@@ -70,37 +76,71 @@ h1, h2, h3{
 
 }
 /** = = = = = E S T I L O   D E L   M E N U = = = = = */
-
-.contenedor > div,
-.contenedor .header,
-.contenedor .contenido,
-.contenedor .sidebar,
-.contenedor .footer {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 4px;
-}
-/* inicio estilos menú */
-.contenedor .header{
+.header{
     grid-area: header;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: .5em;
-    background-color: transparent;
+    position:absolute; z-index:1;
+    
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 98vw;
+    height: 7vh;
+    margin-top: 1em;
 }
 
 .user{
     list-style: none;
+    cursor: pointer;
 }
+
 .fa-solid{
+    margin-top: .3em;
     font-size:1.3rem ;
 }
 /* fin estilos menú */
+
+#popup {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    width: 200px;
+    background-color: rgba(0, 0, 0, 0.7); 
+    color: #fff; 
+    border: 1px solid #ffffff;
+    padding: 10px;
+    display: none;
+    z-index: 999;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    border-radius: 5px; 
+}
+#popup .description {
+    font-size: 16px; 
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+#popup img {
+    width: 100%;
+    height: auto; 
+}
+
+#title:hover + #popup {
+    display: block; 
+}
+
+
 .contenedor .sidebar{
  background-color: transparent;
+ margin-top: 3em;
  display: flex;
  justify-content: center;
+ align-items: center;
  text-align: center;
  flex-direction: column;
  grid-area: sidebar;
@@ -112,30 +152,15 @@ h1, h2, h3{
 }
 
 .contenedor .contenido{
+    grid-area: contenido;
     background-color: rgba(0,0,6,0.5);
     display: flex;
     align-items: center;
     justify-content: space-around;
     flex-direction: column;
-    
-    grid-area: contenido;
-}
-.link-peli a{
-    text-decoration: none;
-    color: #1ba4b6;
-}
-.link-peli a:hover {
-    color: #F39C12; /* Cambia el color al pasar el mouse */
-}
-.contenedor .trailer{
-    background-color: transparent;
-    text-align: center;
-    min-height: 500px;
-    grid-area: trailer;
-    display: flex;
-    justify-content: space-around;
-    flex-direction: column;
-
+    margin-top: 3em;
+    margin-left: 2em;
+    padding: 1em;
 }
 
 .contenedor .card-1,
@@ -193,8 +218,6 @@ h1, h2, h3{
   
 /*? = = = = = E S T I L O    D E L   F O O T E R  = = = = = */
 .contenedor .footer{
-    background-color: transparent;
-    color: #fff;
     width: 100%;
     grid-area: footer;
     display: flex;

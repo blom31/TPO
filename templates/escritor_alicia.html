@@ -1,12 +1,13 @@
 {% extends 'base_escritores.html'%}
 
+
 {% block contenido %}
 <!--? ========================================================================= -->
 <!--? ======================= C  O  N  T  E  N  I  D  O  ====================== -->
 <!--? ========================================================================= -->
 
-<body class="alicia" id="bg-escritores">
-    <h1>Lewis Carrol</h1>
+<main class="contenido bg-gradient " id="">
+    <h2 class="">Lewis Carrol</h1>
     <p>Nombre de nacimiento: Charles Lutwidge Dogson</p>
     <p>Nacimiento: Daresbury, Reino Unido, 1832</p>
     <p>Lógico, matemático, fotógrafo y novelista británico. Tras licenciarse en el Christ Church (1854), empezó
@@ -31,7 +32,7 @@
         un público adulto y atento.</p>
     <p> Falecimiento: 14 de enero de 1898 (65 años)
         Guildford, Surrey, Reino Unido</p>
-
+</main>
 
     <!--* =========================================================== -->
     <!--* ===================== A  S  I  D  E   ===================== -->
@@ -40,7 +41,7 @@
         <img id="slide-carrol" class="imagen"
             src="{{ url_for('static', filename = 'img/escritores/lewis-carroll.jpeg') }}"
             alt="Alicia en el país de las maravillas">
-        <h1>Lewis Carrol</h1>
+        <h3>Lewis Carrol</h3>
     </aside>
 
     <!--! ======================================================================= -->
@@ -67,5 +68,6 @@
         <img src="{{ url_for('static', filename = 'img/escritores/libro-alicia-a-traves-del-espejo.png') }}"
             width="100%" height="auto" alt="Libro Alicia a través del Espejo">
         <a class="boton" href="#">Leer</a>
+    </div>
 
         {% endblock %}
