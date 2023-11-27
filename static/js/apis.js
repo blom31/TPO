@@ -111,17 +111,3 @@ function validarFormulario2(e) {
     return true;  // Cambiado de false a true si el formulario está destinado a ser enviado.
   }
 }
-
-
-/* ==============B O T O N   S C R O L L ========================================  */
-  // Obtén el botón de scroll
-  const scrollToTopBtn = document.getElementById("scrollToTopBtn");
-
-  // Agrega un evento al botón para detectar cuando se hace clic
-  scrollToTopBtn.addEventListener("click", () => {
-    // Desplázate al inicio de la página suavemente
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  });

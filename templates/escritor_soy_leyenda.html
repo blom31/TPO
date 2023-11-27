@@ -27,9 +27,9 @@
         <!--* ===================== A  S  I  D  E   ===================== -->
         <!--* =========================================================== -->
         <aside class="sidebar">
-            <img id="slide-leyenda" class="imagen" src="img/escritores/soy-leyeda-richard.webp"
+            <img id="slide-leyenda" class="imagen" src="{{ url_for('static', filename = 'img/leyenda/richard.webp') }}"
                 alt="J. K. Rowling">
-            <h1>Richard Matheson</h1>
+            <h3>Richard Matheson</h3>
         </aside>
 
         <!--! ======================================================================= -->
@@ -54,5 +54,5 @@
             <img src="{{ url_for('static', filename = 'img/escritores/la_casa_infernal_Matheson.jpg') }}" width="100%" height="auto"
                 alt="Libro La casa Infernal">
             <a class="boton" href="#">Leer</a>
-        
+        </div>
             {% endblock %}  
